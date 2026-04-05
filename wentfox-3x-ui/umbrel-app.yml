@@ -5,7 +5,7 @@ tagline: Xray panel with UI
 icon: icon.png
 category: networking
 version: "2.8.11"
-port: 9443
+port: 2053
 description: >
   3x-ui panel for managing Xray/V2Ray
 developer: you
