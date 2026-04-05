@@ -1,7 +1,13 @@
-id: wentfox
-name: 3X-UI
-version: "1.0.0"
-description: Xray panel
-releaseNotes: Initial release
-developer: You
-port: 9443
+version: "3.7"
+
+services:
+  app:
+    image: ghcr.io/mhsanaei/3x-ui:latest
+    container_name: 3x-ui
+    restart: unless-stopped
+    ports:
+      - "2053:2053"
+    volumes:
+      - ${APP_DATA_DIR}/data:/etc/x-ui
+    environment:
+      - TZ=Europe/Berlin
