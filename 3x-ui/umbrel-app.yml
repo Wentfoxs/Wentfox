@@ -1,0 +1,19 @@
+manifestVersion: 1
+id: wentfox-3x-ui
+name: 3x-ui
+tagline: Xray panel with UI
+icon: icon.png
+category: networking
+version: "1.0.0"
+port: 2053
+description: >
+  3x-ui panel for managing Xray/V2Ray
+developer: you
+website: https://github.com/mhsanaei/3x-ui
+submitter: you
+submission: https://github.com/yourrepo
+repo: https://github.com/mhsanaei/3x-ui
+support: https://github.com/mhsanaei/3x-ui/issues
+gallery: []
+releaseNotes: First release
+dependencies: []
