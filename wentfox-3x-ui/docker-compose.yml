@@ -6,7 +6,7 @@ services:
     container_name: 3x-ui
     restart: unless-stopped
     ports:
-      - "9443:9443"
+      - "2053:2053"
     volumes:
       - ${APP_DATA_DIR}/data:/etc/x-ui
     environment:
