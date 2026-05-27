@@ -1,8 +1,8 @@
 manifestVersion: 1
-id: mtproto-panel
+id:  wentfox-mtproto-panel
 category: Networking
 name: MTProto Panel
-version: "1.0.0"
+version: "1.1.0"
 tagline: Удобная панель управления для MTProto
 description: >-
   Веб-интерфейс для быстрого развертывания и управления прокси-сервером.
