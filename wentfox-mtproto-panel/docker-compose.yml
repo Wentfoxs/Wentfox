@@ -1,0 +1,43 @@
+version: "3.7"
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: mtproto_panel
+      POSTGRES_USER: mtproto
+      POSTGRES_PASSWORD: mtproto
+    volumes:
+      # Umbrel сохранит данные базы в свою защищенную директорию
+      - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
+
+  backend:
+    build: 
+      context: https://github.com/danielVNru/mtproto-panel.git#master
+      dockerfile: backend/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      PORT: "3000"
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_NAME: mtproto_panel
+      DB_USER: mtproto
+      DB_PASSWORD: mtproto
+      # Сразу задаем админские доступы
+      JWT_SECRET: "wentfox_secret_key_123"
+      ADMIN_USERNAME: "admin"
+      ADMIN_PASSWORD: "admin"
+
+  frontend:
+    build: 
+      context: https://github.com/danielVNru/mtproto-panel.git#master
+      dockerfile: frontend/Dockerfile
+    restart: unless-stopped
+    ports:
+      # Этот порт должен совпадать с тем, что указан в umbrel-app.yml
+      - "8085:80"
+    depends_on:
+      - backend
