@@ -1,0 +1,19 @@
+manifestVersion: 1
+id: mtproto-panel
+category: Networking
+name: MTProto Panel
+version: "1.0.0"
+tagline: Удобная панель управления для MTProto
+description: >-
+  Веб-интерфейс для быстрого развертывания и управления прокси-сервером.
+developer: danielVNru
+website: https://github.com/danielVNru/mtproto-panel
+submitter: Wentfox
+submission: https://github.com/Wentfoxs/Wentfox
+repo: https://github.com/danielVNru/mtproto-panel
+support: https://github.com/Wentfoxs/Wentfox/issues
+port: 8085
+path: ""
+defaultUsername: "admin"
+defaultPassword: "admin"
+gallery: []
