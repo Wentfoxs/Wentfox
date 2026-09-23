@@ -4,7 +4,7 @@ name: 3x-ui
 tagline: Xray panel with UI
 icon: https://raw.githubusercontent.com/Wentfoxs/Wentfox/master/wentfox-3x-ui/icon.png
 category: networking
-version: "3.8.6"
+version: "3.8.5"
 port: 2053
 description: >
   3x-ui panel for managing Xray/V2Ray
